@@ -1,31 +1,8 @@
-class Wallet implements User
-{
+interface Wallet {
 
-    private  double moneyInWallet=0;
-
-    public void addMoney(double amount)
-    {
-        moneyInWallet = moneyInWallet + amount;
-
-    }
-
-    public void payMoney(double amount)
-    {
-        if(moneyInWallet < amount  )
-        {
-            System.out.println("No sufficient balance in Wallet");
-
-        }
-        else
-            moneyInWallet = moneyInWallet - amount;
-
-    }
-
-    public double checkBalance()
-    {
-        return moneyInWallet;
-
-    }
-
+    public void addMoneyToWallet(double amount);
+    public void payMoneyToOthers(double amount);
+    public double getCashBackAmount();
+    public double checkBalance();
 
 }
